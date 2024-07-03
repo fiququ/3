@@ -105,20 +105,18 @@ class VRButton {
         button.style.width = '120px'; // Increase width of the button
         button.style.height = '120px'; // Increase height of the button
         button.style.cursor = 'pointer';
+        button.style.backgroundColor = 'orange';
         button.innerHTML = '<i class="fas fa-vr-cardboard"></i>';
         button.style.animation = 'bounce 2s infinite'; // Apply the 'bounce' animation with a duration of 2s and infinite looping
-        button.style.background = 'orange'; // Change background color to orange
 
         button.onmouseenter = function () {
+            button.style.backgroundColor = 'darkorange';
             button.textContent = 'ENTER VR';
-            button.style.fontSize = '10px'; // Reduce text size
-            button.style.background = 'darkorange'; // Change background color on hover
         };
 
         button.onmouseleave = function () {
+            button.style.backgroundColor = 'orange';
             button.innerHTML = '<i class="fas fa-vr-cardboard"></i>';
-            button.style.fontSize = ''; // Reset font size
-            button.style.background = 'orange'; // Reset background color
         };
 
         button.onclick = function () {
@@ -196,7 +194,7 @@ class VRButton {
         if (!ignorePadding) element.style.padding = '12px 6px';
         element.style.border = '1px solid #fff';
         element.style.borderRadius = '4px';
-        element.style.background = (active) ? 'rgba(20,150,80,1)' : 'rgba(180,20,20,1)';
+        element.style.background = (active) ? 'orange' : 'rgba(180,20,20,1)';
         element.style.color = '#fff';
         element.style.font = `normal ${fontSize}px sans-serif`;
         element.style.textAlign = 'center';
